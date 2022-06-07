@@ -1,6 +1,0 @@
-# Competitive Ratio
-
-
-
-
-

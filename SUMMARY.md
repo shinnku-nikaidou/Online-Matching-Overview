@@ -4,5 +4,5 @@
 * [Introduction](introduction.md)
 * [Classic Matching](classic-matching/README.md)
   * [Edge-Weighted Matching](classic-matching/edge-weighted-matching.md)
-* [Models](models.md)
-* [Competitive Ratio](competitive-ratio.md)
+* [Models](models/README.md)
+  * [Competitive Ratio](models/competitive-ratio.md)
