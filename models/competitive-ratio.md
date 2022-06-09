@@ -38,11 +38,103 @@ This is identical to the Unknown IID model, except that $$\mathcal{D}$$ is provi
 
 
 
+### The competitive ratio
+
+The competitive ratio is at least $$\alpha$$ if, for every graph $$G(U, V, E)$$ and every input order of $$V, \frac{\operatorname{ALG}(G)}{\operatorname{OPT}(G)} \geq \alpha$$. Formally, (using C.R. for the competitive ratio):
+
+$$
+\text { C.R. }=\min _{G(U, V, E), \text { order of } V} \frac{\operatorname{ALG}(G)}{\operatorname{OPT}(G)}
+$$
+
+If the algorithm is randomized, then we take the expected value of the objective function in the numerator.
+
+$$
+\text { C.R. }=\min _{G(U, V, E), \text { order of } V} \frac{\mathrm{E}[\operatorname{ALG}(G)]}{\operatorname{OPT}(G)}
+$$
+
+For the Random Order model:
+
+$$
+\text { C.R. }=\min _{G(U, V, E)} \frac{E(\operatorname{ALG}(G))}{\operatorname{OPT}(G)}
+$$
+
+For IID models,&#x20;
+
+$$
+\text { C.R. }=\min _{\mathcal{D}} \frac{E(\operatorname{ALG}(G))}{E(\operatorname{OPT}(G))}
+$$
+
+### Theorem
+
+$$
+\text { C.R. }(\mathrm{Adv}) \leq \text { C.R. }(\mathrm{RO}) \leq  \text { C.R. } (\mathrm{K}-\mathrm{IID}) \leq \mathrm{C} \cdot \mathrm{R} \cdot(\mathrm{UnK}-\mathrm{IID})
+$$
 
 
 
-
-
+$$
+\begin{array}{|l|c|c|c|}
+\hline & \begin{array}{c}
+\text { Adversarial } \\
+\text { Order }
+\end{array} & \begin{array}{c}
+\text { Random Order/ } \\
+\text { unknown IID }
+\end{array} & \text { Known IID } \\
+\hline \text { Bipartite matching } & \begin{array}{c}
+1-\frac{1}{e} \\
+\text { (optimal) }
+\end{array} & \begin{array}{c}
+0.696 \\
+(?)
+\end{array} & \begin{array}{c}
+0.702 \\
+(0.823)
+\end{array} \\
+\hline \text { Vertex-weighted bipartite } & \begin{array}{c}
+1-\frac{1}{e} \\
+(\text { optimal) }
+\end{array} & \begin{array}{c}
+1-\frac{1}{e} \\
+(?)
+\end{array} & \begin{array}{c}
+1-\frac{1}{e} \\
+(?)
+\end{array} \\
+\hline \begin{array}{l}
+\text { Adatching } \\
+\text { (small bids) }
+\end{array} & \begin{array}{c}
+1-\frac{1}{e} \\
+(\text { optimal) }
+\end{array} & \begin{array}{c}
+1-\epsilon \\
+(\text { optimal })
+\end{array} & \begin{array}{c}
+1-\epsilon \\
+(\text { optimal) }
+\end{array} \\
+\hline \begin{array}{l}
+\text { Adwords } \\
+\text { (general bids) }
+\end{array} & \begin{array}{c}
+\frac{1}{2} \\
+(?)
+\end{array} & \begin{array}{c}
+1-\frac{1}{e} \\
+(?)
+\end{array} \\
+\hline \begin{array}{l}
+\text { Display Ads } \\
+\text { with free-disposal } \\
+\text { (large capacities) }
+\end{array} & (?) & \begin{array}{c}
+1-\frac{1}{e}(\mathrm{IID}) \\
+(?)
+\end{array} & (?) \\
+\hline
+\end{array}
+$$
 
 
 
